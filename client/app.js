@@ -15,3 +15,13 @@ client.on('data', function(data) {
 client.on('end', function() {
   console.log('disconnected from server');
 });
+
+
+readline = require('readline');
+readCommand = readline.createInterface({input: process.stdin, output: process.stdout});
+readCommand.prompt();
+
+readCommand.on('line', function(line){
+  console.log('================');
+  client.write(line);
+});

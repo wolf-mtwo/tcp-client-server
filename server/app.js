@@ -10,7 +10,7 @@ var server = net.createServer(function(socket) {
     console.log('client disconnected');
   });
   socket.on('data', function(message) {
-    ServerManager.main(message.line);
+    ServerManager.main(message);
   });
   socket.write('welcome dude!');
   // socket.pipe(socket);
