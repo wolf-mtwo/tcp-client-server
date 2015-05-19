@@ -17,7 +17,7 @@ module.exports = (grunt) ->
         script: 'client/app.js'
         options:
           ignore: ['public/**', 'node_modules/**']
-          watch: ['client']
+          watch: ['client', 'common']
           ext: 'js,html'
           delayTime: 1
           cwd: __dirname
@@ -25,7 +25,7 @@ module.exports = (grunt) ->
         script: 'server/app.js'
         options:
           ignore: ['public/**', 'node_modules/**']
-          watch: ['server']
+          watch: ['server', 'common']
           ext: 'js,html'
           delayTime: 1
           cwd: __dirname
